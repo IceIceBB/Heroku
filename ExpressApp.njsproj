@@ -32,8 +32,9 @@
   <ItemGroup>
     <Compile Include="app.js" />
     <Compile Include="models\Icebreaker.js" />
+    <Compile Include="models\Question.js" />
     <Compile Include="routes\index.js" />
-    <Compile Include="routes\users.js" />
+    <Compile Include="routes\games.js" />
     <Compile Include="bin\www" />
     <Content Include="package.json" />
     <Content Include="public\stylesheets\style.styl" />

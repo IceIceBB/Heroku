@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 var dotenv = require('dotenv').load({ silent: true });
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var games = require('./routes/games');
 
 var app = express();
 
@@ -26,7 +26,7 @@ app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/games', games);
 
 mongoose.connect(process.env.MONGODB_URL, function (err) {
     if (err) {
