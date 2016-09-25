@@ -31,8 +31,8 @@ router.get('/test', function (req, res) {
 });
 
 router.post('/', function (req, res) {
-    Icebreaker.create(req.body, function (err, icebreaker) {
-        res.json(icebreaker);
+    Question.create(req.body, function (err, question) {
+        res.json(question);
     });
 });
 
