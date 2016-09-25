@@ -6,33 +6,25 @@ var Question = require('../models/Question.js');
 
 /* GET users listing. */
 router.get('/', function (req, res) {
-    Icebreaker.find({}, function (err, games) {
-        res.json(games);
+    Question.find({}, function (err, question) {
+        res.json(question);
     });
 });
 
 router.get('/test', function (req, res) {
     var test = {
-        name: "test name",
-        comment: "test comment",
-        rules: "test rules",
-        isclean: true,
-        hasDice: true,
-        hasCards: true,
-        tags: "tag1 tag2 tag3",
-        minPlayers: 1,
-        maxPlayers: 5,
-        materials: "String Paper Scissors",
-        rating: 10
+        name: "Test Question",
+        text: "Text",
+        sfw: true
     };
 
-    Icebreaker.create(test, function (err, game) {
+    Question.create(test, function (err, question) {
         if (err) {
             res.send("Failed");
         } else {
             res.json({
                 success: true,
-                game : game
+                question: question
             });
         }
     });

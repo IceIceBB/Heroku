@@ -36,6 +36,7 @@
     <Compile Include="routes\index.js" />
     <Compile Include="routes\games.js" />
     <Compile Include="bin\www" />
+    <Compile Include="routes\questions.js" />
     <Content Include="package.json" />
     <Content Include="public\stylesheets\style.styl" />
     <Content Include="README.md" />

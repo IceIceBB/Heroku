@@ -9,6 +9,7 @@ var dotenv = require('dotenv').load({ silent: true });
 
 var routes = require('./routes/index');
 var games = require('./routes/games');
+var questions = require('./routes/questions');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/games', games);
+app.use('/questions', questions);
 
 mongoose.connect(process.env.MONGODB_URL, function (err) {
     if (err) {
