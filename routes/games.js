@@ -4,10 +4,9 @@ var router = express.Router();
 var Icebreaker = require('../models/Icebreaker.js');
 var Question = require('../models/Question.js');
 
-/* GET users listing. */
 router.get('/', function (req, res) {
     Icebreaker.find({}, function (err, games) {
-        res.json(games);
+        res.json({ games: games });
     });
 });
 

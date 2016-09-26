@@ -6,8 +6,8 @@ var Question = require('../models/Question.js');
 
 /* GET users listing. */
 router.get('/', function (req, res) {
-    Question.find({}, function (err, question) {
-        res.json(question);
+    Question.find({}, function (err, questions) {
+        res.json({ questions: questions });
     });
 });
 
