@@ -22,6 +22,7 @@ router.get('/test', function (req, res) {
         minPlayers: 1,
         maxPlayers: 5,
         materials: "String Paper Scissors",
+        url: "http://www.nintendo.com/images/page/nes-classic/nes-classic-edition.png",
         rating: 10
     };
 

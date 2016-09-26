@@ -11,6 +11,7 @@ var IcebreakerSchema = mongoose.Schema({
     minPlayers: Number,
     maxPlayers: Number,
     materials: String,
+    url: String,
     rating: Number
 });
 
