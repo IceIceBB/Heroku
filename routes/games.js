@@ -8,7 +8,7 @@ var Comment = require('../models/Comment.js');
 router.get('/', function (req, res) {
     Icebreaker.find({}, function (err, games) {
         res.json({ games: games });
-    });
+    }); 
 });
 
 router.get('/comments', function (req, res) {
