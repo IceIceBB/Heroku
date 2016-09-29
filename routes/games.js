@@ -3,10 +3,23 @@ var router = express.Router();
 
 var Icebreaker = require('../models/Icebreaker.js');
 var Question = require('../models/Question.js');
+var Comment = require('../models/Comment.js');
 
 router.get('/', function (req, res) {
     Icebreaker.find({}, function (err, games) {
         res.json({ games: games });
+    });
+});
+
+router.get('/comments', function (req, res) {
+    Comment.find({}, function (err, comments) {
+        res.json({ comments: comments });
+    });
+});
+
+router.post('/comments', function (req, res) {
+    Comment.create(req.body, function (err, comment) {
+        res.json(comment);
     });
 });
 
