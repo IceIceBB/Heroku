@@ -11,7 +11,6 @@ router.get('/', function (req, res) {
     }); 
 });
 
-/*
 router.get('/comments', function (req, res) {
     Comment.find({}, function (err, comments) {
         res.json({ comments: comments });
@@ -23,7 +22,6 @@ router.post('/comments', function (req, res) {
         res.json(comment);
     });
 });
-*/
 
 router.get('/test', function (req, res) {
     var test = {
